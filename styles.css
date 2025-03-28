@@ -1,0 +1,442 @@
+* {
+    margin: 0; 
+    padding: 0;
+    
+ }
+ 
+ /* Body */
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 15px;
+     overflow-x: hidden; /* Empêche le défilement horizontal */
+ }
+ 
+ /* Links */
+ a {
+     text-decoration: none;
+     color: #444;
+ }
+ 
+ /* Headings */
+ h1 {
+     font-family: 'crete round', serif;
+     color: #444;
+     
+ 
+ }
+ 
+ h2, h4 {
+     
+     text-transform: uppercase;
+ }
+ 
+ h2 {
+     font-size: 55px;
+     color: #fff;
+     text-align: center;
+ }
+ 
+ h4 {
+     font-size: 20px;
+     color: #444;
+ }
+ 
+ /* Paragraphs */
+ p {
+     line-height: 20px;
+     color: #777;
+ }
+ 
+ /* Orange color */
+ .orange {
+     color: #ff7a00;
+ }
+ .green {
+     color: #00a651;
+ }
+ 
+ /* Header */
+ header {
+     height: 120px;
+ }
+ 
+ header h1 {
+     margin-top: 32px;
+     font-size: 45px;
+     
+     
+ }
+ 
+ header nav {
+     margin-top: 50px;
+ }
+ 
+ header nav ul {
+     list-style: none;
+ }
+ 
+ header nav ul li {
+     display: inline-block;
+ }
+ 
+ header nav ul li a {
+     text-transform: uppercase;
+     font-weight: bold;
+     margin-right: 20px;
+ }
+ 
+ /* Wrapper */
+ .wrapper {
+     width: 940px;
+     margin: 0 auto;
+     padding: 0 10px;
+    
+ }
+
+ .wrapper2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    padding: 0 0 0 60px;
+   
+    
+    
+}  
+ 
+ /* Main Image */
+ #main-image {
+     height: 580px;
+     background: url('images/pexels-tomfisk-3856440.jpg') center;
+     background-size: cover;         /* Couvre toute la section sans étirer l'image */
+     background-position: center;    /* Centre l'image horizontalement et verticalement */
+     background-repeat: no-repeat;   /* Empêche que l'image se répète */
+     height: 100vh;                  /* Pleine hauteur d'écran (ou fixe genre 500px si tu préfères) */
+     display: flex;                  /* Permet de centrer verticalement le contenu */   
+    }
+ 
+ #main-image h2 {
+     font-weight: normal;
+     text-align: center;
+     padding: 150px 0 40px 0;
+     margin-bottom: 20px;
+ }
+ 
+ /* Button Styles */
+ .button-1 {
+     height: 50px;
+     width: 150px;
+     background-color: rgb(255, 149, 0);
+     font-size: 20px;
+     display: block;
+     color: aliceblue;
+     margin: 0 auto;
+     text-align: center;
+     line-height: 50px;
+     border-radius: 5px; /* Ajout d'un bord arrondi */
+ }
+ 
+ .button-1:hover {
+     background-color: #02b8dd;
+ }
+ 
+ .button-2 {
+     height: 50px; /* Plus petit que .button-1 */
+     width: 120px; /* Plus petit que .button-1 */
+     background-color: rgb(255, 149, 0);
+     font-size: 16px; /* Plus petit que .button-1 */
+     display: block;
+     color: aliceblue;
+     margin: 0 auto;
+     text-align: center;
+     line-height: 20px; /* Correspond à la hauteur */
+     border-radius: 5px; /* Ajout d'un bord arrondi */
+     padding-top: 7px;
+ }
+ 
+ .button-2:hover {
+     background-color: #02b8dd;
+ }
+ 
+ /* Steps Section */
+ 
+
+#steps {
+  width: 100%; /* Largeur à 100% pour occuper tout l'espace disponible */
+  display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+  flex-wrap: wrap; /* Permet de passer à la ligne suivante si nécessaire */
+  margin: 80px 0;
+}
+
+#steps ul {
+  display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+  flex-wrap: wrap; /* Permet de passer à la ligne suivante si nécessaire */
+  padding: 0;
+  list-style: none;
+}
+
+#steps h4 {
+  margin-bottom: 10px;
+}
+
+#steps-1, #steps-2, #steps-3 ,#steps-4{
+  width: 280px; /* Ajuster la largeur des éléments */
+  height: 300px; /* Ajuster la hauteur des éléments */
+  margin: 10px; /* Espacement entre les éléments */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end; /* Aligne le contenu en bas */
+  justify-content: center; /* Centre le contenu horizontalement */
+  text-align: center;
+  padding: 3px;
+}
+
+
+#steps-1 {
+  background-image: url('images/pexels-julius-silver-240301-753331.jpg');
+}
+
+#steps-2 {
+  background-image: url('images/pexels-ron-pedersen-115813525-9765261.jpg');
+}
+
+#steps-3 {
+  background-image: url('images/pexels-alenka-shalievskaya-3374375-10359129.jpg');
+}
+
+#steps-4 {
+  background-image: url('images/pexels-joseph-russo-430180075-31285265.jpg');
+}
+
+/* Clearfix */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ 
+ /* Possibilities Section */
+ #Possibilities {
+   background-color: #efefef;
+   padding: 60px 0;
+ }
+ 
+ #Possibilities article {
+   width: 460px;
+   height: 270px;
+   float: left;
+   border-radius: 10px;
+ }
+ 
+ #Possibilities article:first-child {
+   margin-right: 20px; /* Ajout d'un espace de 20px après le premier article */
+ }
+ 
+ /* Overlay */
+ .overlay {
+   background: rgba(255, 255, 255, 0.9);
+   border-radius: 10px 0 0 10px; /* Arrondi les bords de gauche */
+   height: 100%;
+   width: 230px;
+ }
+ 
+ /* Possibilities Heading */
+ #Possibilities h4 {
+   padding: 20px; /* Ajout d'un padding de 20px */
+   border-bottom: 1px solid #ddd; /* Ajout d'une bordure inférieure de 1px solide */
+   text-align: center;
+ }
+ 
+ /* Possibilities Paragraph */
+ #Possibilities article p {
+   margin-top: 20px; /* Ajout d'un margin-top de 20px aux paragraphes des articles */
+   text-align: center; /* Alignement du texte centré */
+   padding-bottom: 10px; /* Ajout d'un padding-bottom de 10px */
+   font-style: italic; /* Rendre le texte en italique */
+ }
+ 
+ #Contact {
+     text-align: center;
+     padding: 60px 0;
+ }
+ 
+ #Contact h3 {
+     margin: 0 auto 20px auto;
+     padding-bottom: 20px;
+     border-bottom: 2px solid #2aa0e4;
+     width: 400px;
+     text-transform: uppercase;
+     color: #444;
+     
+ }
+ 
+ #Contact p {
+     padding-bottom: 40px; /* Ajout d'un padding de 20px entre le p et le form */
+ }
+ 
+ form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  form label {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #777;
+    font-weight: bold;
+  }
+  
+  form input[type="text"],
+  form input[type="email"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+ 
+ .button-3 {
+     font-size: 15px;
+     padding: 10px 20px;
+     background-color: #02b8dd;
+     border-style: none;
+     color: #fff;
+     border-radius: 3px;
+     margin: 30px auto 0;
+     display: block;
+ }
+ 
+ .button-3:hover {
+     background-color: #000;}
+ footer{
+     text-align: center;
+     background-color: #444;
+     padding: 60px 0;
+    
+ }
+ 
+ footer h1 {
+     
+     color: rgba(255, 255, 255);
+     font-size: 45px;
+ 
+ 
+ }
+ 
+ .image-bloc {
+     width: 100%;
+     height: 100%;
+     background: url('images/pexels-tima-miroshnichenko-6169634.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     display: flex;
+     
+     
+ }
+
+.image-bloc2{
+    width: 100%;
+    height: 100%;
+    background: url('images/pexels-sagar-waghela-3392402-5777341.jpg') center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+
+
+} 
+ 
+
+.overlay2{
+    background: rgba(255, 255, 255, 0.6);
+    border-radius:0 0 10px 10px;
+    height: 40%;
+    width: 280px; /* Ajuster la largeur pour correspondre à celle des steps */
+}
+#horaires{
+    background-color: #f0f5ff;
+   padding: 60px 0px;
+   text-align: center;
+   margin-top: 10px;
+    
+}
+
+
+
+.horaire-carte {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  
+  
+  .horaire-carte h3 {
+    font-size: 28px;
+    color: #003366;
+    
+  }
+  
+  .horaire-carte p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+  }
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  @media (max-width: 960px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      border-radius: 8px;
+      z-index: 1000;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+  
+    nav ul.active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+
+ 

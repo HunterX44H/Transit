@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <link href="styles.css" rel="stylesheet">
+  <title>Federal Business Transit - Logistique et Transport</title>
+  <meta name="description" content="Solutions de transit, fret et logistique maritime, aérien, routier et ferroviaire. Federal Business Transit vous accompagne dans vos expéditions.">
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-links");
+      const btn = document.getElementById("menu-btn");
+      menu.classList.toggle("active");
+      btn.textContent = menu.classList.contains("active") ? "✖" : "☰";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrapper2 clearfix">
+      <h1><span class="green">Federal</span> business Transit <span class="orange">.</span></h1>
+      <button class="menu-toggle" id="menu-btn" onclick="toggleMenu()">☰</button>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="#main-image">Accueil</a></li>
+          <li><a href="#steps">Services</a></li>
+          <li><a href="#Possibilities">Solutions</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>  <section id="main-image">
+    <div class="wrapper clearfix">
+      <h2>ORGANISEZ VOTRE <br> <strong>LOGISTIQUE SUR MESURE</strong></h2>
+      <a href="#steps" class="button-1">découvrir</a>
+    </div>
+  </section>  <section id="steps">
+    <div class="clearfix">
+      <ul>
+        <li id="steps-1">
+          <div class="overlay2">
+            <h4>Transport maritime</h4>
+            <p>Nous offrons des solutions de transport maritime fiables et efficaces pour vos expéditions internationales.</p>
+          </div>
+        </li>
+        <li id="steps-2">
+          <div class="overlay2">
+            <h4>Fret aérien</h4>
+            <p>Profitez de notre expertise en fret aérien pour des livraisons rapides et sécurisées à travers le monde.</p>
+          </div>
+        </li>
+        <li id="steps-3">
+          <div class="overlay2">
+            <h4>Logistique routière</h4>
+            <p>Nous assurons le transport routier de vos marchandises avec une grande flexibilité et une couverture nationale étendue.</p>
+          </div>
+        </li>
+        <li id="steps-4">
+          <div class="overlay2">
+            <h4>Acheminement ferroviaire</h4>
+            <p>Optez pour le transport ferroviaire pour une solution économique et écologique pour vos expéditions.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>  <section id="Possibilities">
+    <div class="wrapper clearfix">
+      <article class="image-bloc2">
+        <div class="overlay">
+          <h4>transport international</h4>
+          <p><small>Nous assurons vos expéditions vers l'international avec fiabilité et rapidité.</small></p>
+          <a href="#Contact" class="button-2"><strong>Parler à un conseiller</strong></a>
+        </div>
+      </article>
+      <article class="image-bloc">
+        <div class="overlay">
+          <h4>logistique sur mesure</h4>
+          <p><small>Besoin d’une solution de stockage, de groupage ou de distribution ? Nous construisons des offres adaptées à vos flux.</small></p>
+          <a href="#Contact" class="button-2"><strong> solutions Logistique</strong></a>
+        </div>
+      </article>
+    </div>
+  </section>  <section id="Contact">
+    <div class="wrapper clearfix">
+      <h3>contactez-nous</h3>
+      <p>Chez Transit Logistique, chaque expédition est un enjeu stratégique. Notre équipe est à votre écoute pour construire avec vous la meilleure solution logistique.</p>
+      <form id="contact-form">
+        <label for="nom">Nom :</label>
+        <input id="nom" name="nom" type="text" placeholder="Votre nom" required>
+      
+        <label for="email">Email :</label>
+        <input id="email" name="email" type="email" placeholder="Votre email" required>
+      
+        <label for="sujet">Sujet :</label>
+        <input id="sujet" name="sujet" type="text" placeholder="Sujet de votre demande">
+      
+        <input type="submit" value="Envoyer la demande" class="button-3">
+      </form>
+      
+      <!-- Pop-up de confirmation/erreur -->
+      <div id="popup-confirmation" style="display:none; margin-top: 20px; font-weight: bold;"></div>
+    </div>
+  </section>  <section id="horaires">
+    <div class="wrapper clearfix">
+      <article class="horaire-carte">
+        <div class="horloge-icon">⏰</div>
+        <h3>Nos Horaires</h3>
+        <p><strong>Lundi à Vendredi :</strong> 08h – 18h</p>
+        <p><strong>Samedi - Dimanche :</strong> Fermé</p>
+      </article>
+    </div>
+  </section>  <footer>
+    <h1>Federal Buisness Transit <span class="orange">.</span></h1>
+    <div>Copyright © Tous droits réservés.</div>
+  </footer>
+  <script>
+    const form = document.getElementById("contact-form");
+    const popup = document.getElementById("popup-confirmation");
+  
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+  
+      const nom = document.getElementById("nom").value.trim();
+      const email = document.getElementById("email").value.trim();
+  
+      // Validation des champs
+      if (nom === "" || email === "") {
+        popup.style.display = "block";
+        popup.style.color = "red";
+        popup.innerText = "Veuillez remplir le nom et l'email avant d'envoyer.";
+        return;
+      }
+  
+      // Validation du format de l'email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        popup.style.display = "block";
+        popup.style.color = "red";
+        popup.innerText = "Veuillez entrer une adresse email valide.";
+        return;
+      }
+  
+      try {
+        const data = new FormData(form);
+        const response = await fetch("https://formspree.io/f/meoaleer", {
+          method: "POST",
+          body: data,
+          headers: { Accept: "application/json" },
+        });
+  
+        if (response.ok) {
+          form.reset();
+          popup.style.display = "block";
+          popup.style.color = "green";
+          popup.innerText = "Mercid d'avoir contacté Federal Business Transit. Nous vous recontacterons par email dans les plus brefs délais.";
+        } else {
+          popup.style.display = "block";
+          popup.style.color = "red";
+          popup.innerText = "Une erreur est survenue. Veuillez réessayer.";
+        }
+      } catch (error) {
+        popup.style.display = "block";
+        popup.style.color = "red";
+        popup.innerText = "Une erreur réseau est survenue. Veuillez vérifier votre connexion.";
+      }
+    });
+  </script></body>
+</html>
